@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Taller Completo - Formularios HTML</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 20px;
+}
+
+h1{
+    text-align: center;
+    color: #2c3e50;
+}
+
+.seccion{
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    border: 2px solid #3498db;
+}
+
+form{
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    max-width: 450px;
+    margin: auto;
+    border: 2px solid #3498db;
+}
+
+label{
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input, select, textarea{
+    width: 100%;
+    padding: 6px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button{
+    margin-top: 15px;
+    padding: 10px;
+    width: 100%;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #2980b9;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Taller Práctico — Formularios en HTML</h1>
+
+<div class="seccion">
+<h2>🧠 Parte 1 — Preguntas y Respuestas</h2>
+
+<p><strong>1. ¿Qué es un formulario en HTML?</strong><br>
+Es un conjunto de campos que permite al usuario ingresar datos en una página web para enviarlos al servidor.</p>
+
+<p><strong>2. ¿Para qué sirve la etiqueta &lt;form&gt;?</strong><br>
+Sirve para crear el formulario y definir cómo y a dónde se enviarán los datos.</p>
+
+<p><strong>3. Diferencia entre método GET y POST</strong><br>
+GET envía los datos por la URL y es visible.  
+POST envía los datos de manera oculta y es más seguro.</p>
+
+<p><strong>4. ¿Qué es validación de datos en formularios?</strong><br>
+Es verificar que los datos ingresados cumplan ciertas reglas antes de enviarse.</p>
+
+<p><strong>5. Mencione 5 tipos de inputs en HTML</strong><br>
+text, email, password, number, date.</p>
+</div>
+
+<div class="seccion">
+<h2>📋 Formulario Completo</h2>
+
+<form action="#" method="POST">
+
+<label>Nombre:</label>
+<input type="text" required minlength="3" maxlength="30">
+
+<label>Apellido:</label>
+<input type="text" required minlength="3">
+
+<label>Email:</label>
+<input type="email" required>
+
+<label>Contraseña:</label>
+<input type="password" required minlength="6">
+
+<label>Teléfono:</label>
+<input type="tel" pattern="[0-9]{10}" required>
+
+<label>Edad:</label>
+<input type="number" min="1" max="100" required>
+
+<label>Dirección:</label>
+<input type="text" required>
+
+<label>Ciudad:</label>
+<select required>
+<option value="">Seleccione</option>
+<option>Barranquilla</option>
+<option>Soledad</option>
+<option>Cartagena</option>
+</select>
+
+<label>Fecha de nacimiento:</label>
+<input type="date" required>
+
+<label>Género:</label>
+<input type="radio" name="genero" required> Masculino
+<input type="radio" name="genero"> Femenino
+
+<label>Intereses:</label>
+<input type="checkbox"> Deportes
+<input type="checkbox"> Música
+<input type="checkbox"> Tecnología
+
+<label>Comentarios:</label>
+<textarea rows="3" maxlength="200"></textarea>
+
+<label>
+<input type="checkbox" required> Aceptar términos y condiciones
+</label>
+
+<button type="submit">Enviar</button>
+
+</form>
+</div>
+
+</body>
+</html>
